@@ -31,16 +31,23 @@ gnome-extensions install --force dist/desktop-lrc@kgpche.shell-extension.zip
 
 ## 版本历史
 
-- v4：拖动改 Clutter.Grab（事件定向到手柄，不依赖传播）+ NaN 坐标三重防护；歌词文字可直接拖动；设置按钮改同步调用+CLI 回退；悬停探针与全链路拖动日志；进度值防护；抓取泄漏修复
-- v3：长句适配改 Pango 离屏测量自动缩字号（弃用 CSS max-width/St 换行）；拖动坐标合法性校验
-- v2：修复拖动被自动居中打断、右键改为内嵌操作条；St.BoxLayout spacing 移到 CSS（GNOME 50 移除构造参数）
-- v1：初始版本（本地 .lrc 三级匹配、MPRIS 跟随、错开显示、Ubuntu 橙默认色）
+- v9：顶栏音乐图标总开关（隐藏状态持久化、紧凑宽度）；垂直位置三档（默认中部）；操作条移至歌词下方；完整的关闭/恢复链路
+- v8：拖动改用 GNOME 官方手势配方（St.DndStartGesture + pushModal + 'event' 信号——per-type 信号与 captured-event 在 GNOME 50 上不可靠）
+- v5–v7：NaN 坐标防护、Pango 离屏测量实现长句自动缩字号（替代不可靠的 CSS max-width/St 换行）、独立 GTK4 设置窗口
+- v1–v4：初始版本；本地 .lrc 三级匹配；MPRIS 跟随；Ubuntu 橙默认色、错开显示；右键内嵌操作条
+
 
 ## 调整外观
 
-推荐用图形界面：在“扩展”应用里找到 Desktop LRC 点齿轮，或运行
-`gnome-extensions prefs desktop-lrc@kgpche`。可调：字体与大小、当前句颜色、
-下一句颜色、是否显示下一句预览、恢复默认位置。改动立即生效，无需重启。
+三种入口（改动都即时生效）：
+
+- **右键歌词 → 操作条 → 「设置…」**：独立 GTK4 设置窗口，不依赖 shell 的 prefs
+  服务（部分发行版该服务损坏时依然可用）；
+- **顶栏音乐图标**：歌词显示/隐藏总开关；操作条内还有位置三档与下一句开关；
+- **标准入口**：`gnome-extensions prefs desktop-lrc@kgpche` 或扩展应用里的齿轮
+  （需要发行版的 prefs 服务正常）。
+
+可调项：字体与大小、当前句颜色、下一句颜色、下一句预览开关、垂直位置、恢复默认位置。
 
 命令行方式（等效）：
 
