@@ -1,5 +1,7 @@
 # desktop-lrc 本地桌面歌词
 
+![Desktop LRC](docs/screenshot-main.png)
+
 自写的 GNOME Shell 桌面歌词扩展，只为本地曲库服务：
 
 - 读取歌词目录（默认 `~/Music`）中的 **`歌手 - 歌名.lrc`**，与音频同目录同名，逐行滚动显示当前句 + 下一句预览；
@@ -38,6 +40,8 @@ gnome-extensions install --force dist/desktop-lrc@kgpche.shell-extension.zip
 
 
 ## 调整外观
+
+![设置窗口](docs/screenshot-settings.png)
 
 三种入口（改动都即时生效）：
 
