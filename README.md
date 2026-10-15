@@ -1,6 +1,6 @@
 # desktop-lrc 本地桌面歌词
 
-![Desktop LRC](docs/screenshot-main.png)
+![Desktop LRC](docs/hero.png)
 
 自写的 GNOME Shell 桌面歌词扩展，只为本地曲库服务：
 
@@ -41,7 +41,7 @@ gnome-extensions install --force dist/desktop-lrc@kgpche.shell-extension.zip
 
 ## 调整外观
 
-![设置窗口](docs/screenshot-settings.png)
+![设置窗口](docs/settings.png)
 
 三种入口（改动都即时生效）：
 
