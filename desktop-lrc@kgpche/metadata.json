@@ -1,0 +1,14 @@
+{
+  "uuid": "desktop-lrc@kgpche",
+  "name": "Desktop LRC",
+  "description": "Local desktop lyrics: reads \"Artist - Title.lrc\" beside your music files, follows any MPRIS player with a two-line staggered display, auto font-fit for long lines, gesture-based dragging, tray toggle, and a standalone GTK4 preferences window.",
+  "shell-version": [
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
+  "version": 9,
+  "settings-schema": "org.gnome.shell.extensions.desktop-lrc",
+  "url": "https://github.com/kgpche/desktop-lrc"
+}

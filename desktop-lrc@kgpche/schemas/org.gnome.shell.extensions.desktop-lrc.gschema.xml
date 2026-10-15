@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.desktop-lrc"
+          path="/org/gnome/shell/extensions/desktop-lrc/">
+    <key type="i" name="x">
+      <default>-1</default>
+      <summary>歌词左上角 X 坐标，-1 表示自动（水平居中）</summary>
+    </key>
+    <key type="i" name="y">
+      <default>-1</default>
+      <summary>歌词左上角 Y 坐标，-1 表示自动（屏幕底部）</summary>
+    </key>
+    <key type="s" name="font-name">
+      <default>"Sans 32"</default>
+      <summary>字体，格式 “字体 大小”</summary>
+    </key>
+    <key type="s" name="active-color">
+      <default>"#E95420"</default>
+      <summary>当前歌词行颜色</summary>
+    </key>
+    <key type="s" name="next-color">
+      <default>"#ffffff"</default>
+      <summary>下一行预览颜色</summary>
+    </key>
+    <key type="b" name="show-next">
+      <default>true</default>
+      <summary>是否显示下一行预览</summary>
+    </key>
+    <key type="s" name="lyric-dir">
+      <default>"~/Music"</default>
+      <summary>歌词目录（.lrc 与音频同目录同名）</summary>
+    </key>
+    <key type="u" name="position">
+      <range min="0" max="2"/>
+      <default>1</default>
+      <summary>垂直位置（0 底部 / 1 中部 / 2 顶部）</summary>
+    </key>
+    <key type="b" name="hidden">
+      <default>false</default>
+      <summary>隐藏歌词（顶栏音乐图标可切换回来）</summary>
+    </key>
+  </schema>
+</schemalist>
